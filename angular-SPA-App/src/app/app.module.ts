@@ -7,6 +7,7 @@ import { HeaderSectionComponent } from './main/header-section/header-section.com
 import { ContentSectionComponent } from './main/content-section/content-section.component';
 import { FooterSectionComponent } from './main/footer-section/footer-section.component';
 import { MainComponent } from './main/main.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { MainComponent } from './main/main.component';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule
   ],
   providers: [],

@@ -1,0 +1,112 @@
+{
+    "shopData": [
+        {
+            "pk": 987,
+            "name": "test reward",
+            "points": 0,
+            "display_img_url": "assets/img/test_card.png",
+            "quantity": 14,
+            "valid_until": "2024-12-31T00:00:00",
+            "low_quantity": 10
+        },
+        {
+            "pk": 988,
+            "name": "Dairy Farm $20",
+            "points": 2,
+            "display_img_url": "assets/img/dairy_farm.png",
+            "quantity": 12,
+            "valid_until": "2024-12-31T00:00:00",
+            "low_quantity": 10
+        },
+        {
+            "pk": 989,
+            "name": "Qoo10 $5 (Code + Pin) together",
+            "points": 10,
+            "display_img_url": "assets/img/code_pin.png",
+            "quantity": 5,
+            "valid_until": "2024-12-31T00:00:00",
+            "low_quantity": 10
+        },
+        {
+            "pk": 987,
+            "name": "cafe coffee day e-gift card Rs 100",
+            "points": 50,
+            "display_img_url": "assets/img/cafe_day.png",
+            "quantity": 14,
+            "valid_until": "2024-12-31T00:00:00",
+            "low_quantity": 10
+        },
+        {
+            "pk": 988,
+            "name": "Peter England e-gift card Rs 1000",
+            "points": 500,
+            "display_img_url": "assets/img/peter_england.png",
+            "quantity": 12,
+            "valid_until": "2024-12-31T00:00:00",
+            "low_quantity": 10
+        },
+        {
+            "pk": 989,
+            "name": "swiggy",
+            "points": 80,
+            "display_img_url": "assets/img/swiggy_card.png",
+            "quantity": 5,
+            "valid_until": "2024-12-31T00:00:00",
+            "low_quantity": 10
+        },
+        {
+            "pk": 987,
+            "name": "Zomatoo",
+            "points": 450,
+            "display_img_url": "assets/img/zomatoo_card.png",
+            "quantity": 14,
+            "valid_until": "2024-12-31T00:00:00",
+            "low_quantity": 10
+        },
+        {
+            "pk": 988,
+            "name": "amazon",
+            "points": 140,
+            "display_img_url": "assets/img/amazon_card.png",
+            "quantity": 12,
+            "valid_until": "2024-12-31T00:00:00",
+            "low_quantity": 10
+        },
+        {
+            "pk": 989,
+            "name": "meshoo",
+            "points": 170,
+            "display_img_url": "assets/img/meesho_card.png",
+            "quantity": 5,
+            "valid_until": "2024-12-31T00:00:00",
+            "low_quantity": 10
+        },
+        {
+            "pk": 987,
+            "name": "myntra",
+            "points": 900,
+            "display_img_url": "assets/img/myntra_card.png",
+            "quantity": 14,
+            "valid_until": "2024-12-31T00:00:00",
+            "low_quantity": 10
+        },
+        {
+            "pk": 988,
+            "name": "ajio",
+            "points": 560,
+            "display_img_url": "assets/img/ajio_card.png",
+            "quantity": 12,
+            "valid_until": "2024-12-31T00:00:00",
+            "low_quantity": 10
+        },
+        {
+            "pk": 989,
+            "name": "flipkart",
+            "points": 740,
+            "display_img_url": "assets/img/flipkart_card.png",
+            "quantity": 5,
+            "valid_until": "2024-12-31T00:00:00",
+            "low_quantity": 10
+        }
+    ]
+}
