@@ -64,3 +64,64 @@
   .toggled {
     background: red;
   }  
+
+  .custOnHigh {
+      margin-top: -3em;
+      padding-bottom: 0.8em;
+      margin-left: 1em;
+      border: 1px solid #ccc;
+      border-radius: 25px 25px 25px 25px;
+      padding-left: 1em;
+      width: 60%;
+      background-color: #6d565638;
+      color: #f80505;
+      font-size: 14px;
+      text-align: center;
+  }
+
+  .custOutOfStock {
+      margin-top: -3em;
+      padding-bottom: 0.8em;
+      margin-left: 1em;
+      border: 1px solid #ccc;
+      border-radius: 25px 25px 25px 25px;
+      padding-left: 1em;
+      width: 60%;
+      background-color: #e5dfdf64;
+      color: #212121;
+      font-size: 14px;
+      text-align: center;
+  }
+
+  .custColPage {
+      border: 1px solid #ccc;
+      float: right;
+      width: 6em;
+      background-color: #ffffff;
+  }
+
+  .custSpanPageAlign{
+    padding-left:2.2em;
+  }
+  .custSpanMargLft{
+    margin-left:0.5em
+  }
+
+  .custColDisp{
+    display:contents;
+  }
+
+  .custLblMargTop{
+    margin-top: 0.5em;
+  }
+
+  .custCardTitle {
+      text-align: center;
+      font-size: 12px;
+      text-transform: capitalize;
+  }
+
+  .custPTxt{
+    text-align: center;
+    font-size:10px
+  }

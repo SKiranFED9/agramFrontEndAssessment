@@ -8,12 +8,14 @@ import { ContentSectionComponent } from './main/content-section/content-section.
 import { FooterSectionComponent } from './main/footer-section/footer-section.component';
 import { MainComponent } from './main/main.component';
 import { FormsModule } from '@angular/forms';
+import { OverlayComponent } from './main/content-section/overlay.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderSectionComponent,
     ContentSectionComponent,
+    OverlayComponent,
     FooterSectionComponent,
     MainComponent    
   ],

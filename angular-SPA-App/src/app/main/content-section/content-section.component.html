@@ -1,6 +1,6 @@
 <div class="content" style="background-color: #f5f5ff;">
     <div class="container">
-        <form>            
+        <form>
             <div class="row">
                 <div class="col-12 mt-2 mb-2">
                     <div class="form-group position-relative">
@@ -74,31 +74,36 @@
                             <div class="row">
                                 <div class="col-md-12 mt-2">
                                     <span>{{getLength}} results Found</span>
-                                    <button class="btn btn-danger btn-sm custTxtAlign mb-2" (click)="toggleField()">Sort</button>
+                                    <button class="btn btn-danger btn-sm custTxtAlign mb-2"
+                                        (click)="showOverlay()">Sort</button>
                                 </div>
                                 <div class="col-md-12 col-xs-12">
-                                    <div class="row mb-3" style="max-height:50vh;overflow: auto;">
+                                    <div class="row mb-3" style="height:50vh;overflow: auto;">
                                         <div class="col-md-4 col-xs-12" *ngFor="let getList of getData.shopData">
                                             <div class="card mb-2">
                                                 <img class="card-img-top img-fluid" src="{{getList.display_img_url}}"
                                                     alt="">
-                                                <div class="card-body">
-                                                    <h4 class="card-title"
-                                                        style="text-align: center;font-size:12px;text-transform: capitalize;">
-                                                        {{getList.name}}</h4>
-                                                    <p class="card-text" style="text-align: center;font-size:10px">
+                                                    <span class="custOnHigh" *ngIf="(getList.quantity != null) &&( getList.quantity <= getList.low_quantity)">
+                                                        <label class="custLblMargTop" >ON High Demand</label></span>
+                                                        <span  class="custOutOfStock" *ngIf="getList.quantity === 0">
+                                                        <label class="custLblMargTop" >(Out of Stock)</label></span>   
+                                                <div class="card-body"> 
+                                                    <h4 class="card-title custCardTitle">
+                                                        {{getList?.name}}</h4>
+                                                    <p class="card-text custPTxt">
                                                         {{getList.points}}</p>
-                                                </div>
+                                                    </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="row" style="float: right;">
-                                        
-                                        <div class="col-3" style="border:1px solid #ccc;float: right;width: 6em;background-color: #ffffff;">
-                                            <span style="padding-left:2.2em;">{{getLength}} <i class="fa fa-angle-down" aria-hidden="true"></i> </span>
+                                    <div class="row custTxtAlign">
+
+                                        <div class="col-3 custColPage">
+                                            <span class="custSpanPageAlign">{{getLength}} <i class="fa fa-angle-down"
+                                                    aria-hidden="true"></i> </span>
                                         </div>
-                                        <div class="col-md-9" style="display:contents;">
-                                            <span style="margin-left:0.5em"> per page</span>
+                                        <div class="col-md-9 custColDisp">
+                                            <span class="custSpanMargLft"> per page</span>
                                         </div>
                                     </div>
                                 </div>
@@ -107,6 +112,7 @@
                     </div>
                 </div>
             </div>
+            <app-overlay #overlay (onClose)="onOverlayClose($event)"></app-overlay>
         </form>
     </div>
 </div>

@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output, ViewChild } from '@angular/core';
 import shopData  from '../../../assets/json/sampleData.json';
+import { OverlayComponent } from './overlay.component';
 
 @Component({
   selector: 'content-section',
@@ -12,22 +13,54 @@ export class ContentSectionComponent implements OnInit {
   getLength : any;
 
   classToggled = false;
+  @ViewChild('overlay')
+  overlay: OverlayComponent = new OverlayComponent;
 
-  constructor() {
+  recievedFromChild:string="empty";
 
-  }
+  @Output() onClose = new EventEmitter<void>();
+  isSort: any;
+
+  constructor() { }
 
   ngOnInit(): void {
     this.getData = shopData;
-    console.log(shopData.shopData.length);
     this.getLength = shopData.shopData.length;
-
   }
 
-
-  public toggleField() {
-    this.classToggled = !this.classToggled;  
+  showOverlay() {
+    this.overlay.showOverlay('This is an overlay!');   
   }
 
+  onOverlayClose($event: any) {
+    this.isSort = $event;
+    this.sortData($event);
+  }
 
+  sortData(_case: string) {
+    console.log(_case);
+    switch (_case) {
+      case 'ascending':
+        this.getData.shopData.sort((a : any, b: any) => {
+          let typeA = a.name.toLowerCase(),
+            typeB = b.name.toLowerCase();
+          if (typeA < typeB)
+            //sort string ascending
+            return -1;
+          if (typeA > typeB) return 1;
+          return 0; //default return value (no sorting)
+        });
+        break;
+      case 'descending':
+        this.getData.shopData.sort((a: any, b: any) => {
+          let typeA = a.name.toLowerCase(),
+            typeB = b.name.toLowerCase();
+          if (typeA > typeB)
+            //sort string ascending
+            return -1;
+          if (typeA > typeB) return 1;
+          return 0; //default return value (no sorting)
+        });
+    }
+  }
 }

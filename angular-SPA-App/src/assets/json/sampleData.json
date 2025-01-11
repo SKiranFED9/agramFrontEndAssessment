@@ -95,9 +95,9 @@
             "name": "ajio",
             "points": 560,
             "display_img_url": "assets/img/ajio_card.png",
-            "quantity": 12,
+            "quantity": 0,
             "valid_until": "2024-12-31T00:00:00",
-            "low_quantity": 10
+            "low_quantity": -1
         },
         {
             "pk": 989,
