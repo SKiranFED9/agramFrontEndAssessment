@@ -1,6 +1,80 @@
-<ng-content></ng-content>
-<ng-content></ng-content>
-<ng-content></ng-content>
-<ng-content></ng-content>
-<ng-content></ng-content>
-<ng-content></ng-content>
+<div class="content" style="background-color: #f5f5ff;">
+    <div class="container">
+        <form>
+            <div class="row">
+                <div class="col-12 mt-2 mb-2">
+                    <div class="form-group position-relative">
+                        <span class="custFtSize">Search</span>
+                        <input autocomplete="off" type="text" ng-model="patName" id="patName" placeholder="Search"
+                            class="form-control custPL2" min-length="4"
+                            uib-typeahead="pat.pName as pat.pName for pat in patients($viewValue)"
+                            typeahead-editable="false" />
+                        <input type="hidden" id="patientId" min-length="4" ng-model="AddqueryArr.patient"
+                            value="search" />
+                        <a href="#" class="search-icon">
+                            <i class="fa fa-search" id="myimage"
+                                ng-click="getnames(AddqueryArr.qfrom,patName.pName)"></i>
+                        </a>
+                    </div>
+                    <div class="row mt-2 mb-2">
+                        <div class="col-12">
+                            <div class="form-inline">
+                                <label for="" class="custFtSize1">Applied Filters:</label>
+                                <span class="customFilterText">e-Voucher <i class="fa fa-times"></i></span>
+                                <span class="customFilterText">Clear Filters <i class="fa fa-times"></i></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-3">
+                        <div class="col-md-4 col-xs-12">
+                            <div class="card custCardAlign">
+                                <span class="p-2">Categories</span>
+                                <div class="card-body">
+                                    <ul class="list-group custUl">
+                                        <li class="list-group-item">
+                                            <span><i class="fa fa-angle-down" aria-hidden="true"></i></span>
+                                            <span><span class="custSpanTxt"></span>e-Voucher</span>
+                                            <span class="custTxtAlign">
+                                                <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                            </span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <span><i class="fa fa-angle-down" aria-hidden="true"></i></span>
+                                            <span><span class="custSpanTxt"></span>Products</span>
+                                            <span class="custTxtAlign">
+                                                <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+                                            </span>
+                                        </li>
+                                    </ul>
+
+                                    <ul class="list-group custUl mt-2">
+                                        <li class="list-group-item">
+                                            <span><i class="fa fa-angle-up" aria-hidden="true"></i></span>
+                                            <span><span class="custSpanTxt"></span>Evergreen</span>
+                                            <span class="custTxtAlign">
+                                                <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+                                            </span>
+                                        </li>
+                                    </ul>
+
+                                    <ul class="list-group custUl mt-2">
+                                        <li class="list-group-item">
+                                            <span><i class="fa fa-angle-up" aria-hidden="true"></i></span>
+                                            <span><span class="custSpanTxt"></span>Fashion & Retail</span>
+                                            <span class="custTxtAlign">
+                                                <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-8"> serach items</div>
+
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
